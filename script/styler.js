@@ -44,10 +44,10 @@ var isMobile = {
 
 
 
-function NavigateToLink(sender)
+function NavigateToLink(type)
 {   
-    
-    if(sender.id == "birthday")
+    // alert(sender.id);
+    if(type == "birthday")
     {
         if(/Android/i.test(navigator.userAgent))
             window.open('https://maps.app.goo.gl/Pi7TZz9LT2fM2MWj6', '_blank');
