@@ -1,0 +1,130 @@
+/* Necessities */
+
+body{
+    font-family: Calibri;
+    font-size: 1rem;
+}
+
+.wrapper
+{
+    width: 80%;
+    margin: auto;
+    margin-top: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+/* Card and card elements */
+
+.card
+{
+    width: 80%;
+    max-width: 300px;
+    
+    margin: 0 auto;
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: #FAFAFA;
+
+    cursor: pointer;
+}
+
+.card > span
+{
+    width: 80%;
+    margin: auto;
+    margin-top: 1.5rem;
+    padding-bottom: 1.5rem;
+
+}
+
+.card > span:nth-of-type(1)
+{
+    font-size: 1.3rem;
+    font-weight: bold;
+
+    border-bottom: 2px solid #E5E5E5;
+
+}
+
+.card > span:last-of-type
+{
+    overflow: hidden;
+}
+
+.card > span:last-of-type::before
+{
+    content: '';
+    background: url("../res/location.png");
+    display: inline-block;
+    vertical-align: middle;
+
+    padding-right: 0.2rem;
+
+    height: 1.3rem;
+    width: 1.3rem;
+
+    background-size: 1.3rem 1.3rem;
+    background-repeat: no-repeat;
+}
+
+img
+{
+    width: 100%;
+}
+
+/* Snackbar reminder to click the card */
+
+#snackbar
+{
+    visibility: hidden;
+
+    background-color: #333;
+    color: #fff;
+
+    text-align: center;
+
+    border-radius: 2px;
+
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    bottom: 30px;
+
+    width: 20%;
+    left: 39%;
+}
+
+#snackbar.show {
+    visibility: visible; 
+    
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 4.5s;
+    animation: fadein 0.5s, fadeout 0.5s 4.5s;
+  }
+
+  @-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
