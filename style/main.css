@@ -96,10 +96,9 @@ img
     padding: 16px;
     position: fixed;
     z-index: 1;
-    bottom: 30px;
-
-    width: 20%;
-    left: 39%;
+    width: 100%;
+    margin-left: 0;
+    bottom: 0px;
 }
 
 #snackbar.show {
@@ -110,21 +109,21 @@ img
   }
 
   @-webkit-keyframes fadein {
-    from {bottom: 0; opacity: 0;}
-    to {bottom: 30px; opacity: 1;}
+    from {bottom: -30px; opacity: 0;}
+    to {bottom: 0px; opacity: 1;}
   }
   
   @keyframes fadein {
-    from {bottom: 0; opacity: 0;}
-    to {bottom: 30px; opacity: 1;}
+    from {bottom: -30px; opacity: 0;}
+    to {bottom: 0px; opacity: 1;}
   }
   
   @-webkit-keyframes fadeout {
-    from {bottom: 30px; opacity: 1;}
-    to {bottom: 0; opacity: 0;}
+    from {bottom: 0px; opacity: 1;}
+    to {bottom: -30px; opacity: 0;}
   }
   
   @keyframes fadeout {
-    from {bottom: 30px; opacity: 1;}
-    to {bottom: 0; opacity: 0;}
+    from {bottom: 0px; opacity: 1;}
+    to {bottom: -30px; opacity: 0;}
   }
